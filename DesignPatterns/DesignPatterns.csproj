@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solid\SolidOCP.cs" />
+    <Compile Include="Solid\SolidSRP.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
