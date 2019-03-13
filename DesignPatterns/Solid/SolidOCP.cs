@@ -54,6 +54,7 @@ namespace DesignPatterns.Solid
         }
     }
 
+    // ===================================================================================================
 
     // Without Using SolidOCP
     public interface ISpecification<T>

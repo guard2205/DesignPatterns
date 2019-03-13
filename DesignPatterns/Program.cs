@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using DesignPatterns.Solid;
 namespace DesignPatterns
 {
     public class Program
     {
+        static public int Area(Rectangle r) => r.Width * r.Height;
+
         static void Main(string[] args)
         {
             var j = new Journal();
@@ -16,6 +14,8 @@ namespace DesignPatterns
             j.AddEntry("I wake up");
             j.AddEntry("I lunched");
             Console.WriteLine(j.ToString());
+
+
             Console.WriteLine("===========\n SolidORP");
             Console.WriteLine("*Filtering Without SOLIDORP*");
             var apple = new Product("Appel", Color.Green, Size.Small);
@@ -30,7 +30,7 @@ namespace DesignPatterns
             {
                 Console.WriteLine($" - {p.Name} is green");
             }
-
+             
             Console.WriteLine("*Filtering With SOLIDORP*");
             var bf = new BetterFilter();
             Console.WriteLine("Green products (new): ");
@@ -43,7 +43,15 @@ namespace DesignPatterns
             {
                 Console.WriteLine($" - {p.Name} is blue and big");
             }
-            Console.WriteLine("===========\n SolidORP");
+            Console.WriteLine("===========\n SOLID LSP ");
+
+            
+            Rectangle rc = new Rectangle(2,3);
+            Console.WriteLine($"{rc} has area {Area(rc)}");
+
+            Square sq = new Square();
+            sq.Width = 4;
+            Console.WriteLine($"{sq} has area {Area(sq)}");
 
             Console.WriteLine("Enter a key");
             Console.ReadKey();
